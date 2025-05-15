@@ -5,7 +5,7 @@
   padding-bottom: 48px;
 }
 
-.Logos-Wrapper:first-child {
+.Logos-Wrapper :first-child {
   margin-right: -24px;
 }
 
