@@ -17,7 +17,7 @@ function getStaticAssetPath(filename: string): string {
 async function loadWasm(): Promise<void> {
   const goWasm = new window.Go();
   const result = await WebAssembly.instantiateStreaming(
-    fetch(getStaticAssetPath('main.go')),
+    fetch(getStaticAssetPath('main.wasm')),
     goWasm.importObject
   );
   goWasm.run(result.instance);
