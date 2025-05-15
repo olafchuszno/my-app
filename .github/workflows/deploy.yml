@@ -1,0 +1,53 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install React dependencies
+        run: npm install
+
+      - name: Build React application
+        run: npm run build
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Build Go Wasm
+        run: |
+          cd ./go-wasm-code 
+          GOOS=js GOARCH=wasm go build -o ../build/static/js/main.wasm main.go
+
+      - name: Copy Go Wasm glue code
+        run: |
+          GO_WASM_EXEC_JS=$(go env GOROOT)/misc/wasm/wasm_exec.js
+          if [ -f "$GO_WASM_EXEC_JS" ]; then
+            cp "$GO_WASM_EXEC_JS" ./build/static/js/
+          else
+            echo "wasm_exec.js not found at $GO_WASM_EXEC_JS. Please check your Go installation or version."
+            exit 1
+          fi
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+
+          publish_branch: gh-pages

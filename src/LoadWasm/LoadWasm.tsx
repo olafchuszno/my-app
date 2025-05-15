@@ -12,7 +12,7 @@ async function loadWasm(): Promise<void> {
   goWasm.run(result.instance);
 }
 
-export const LoadWasm: React.FC<{ children: React.ReactNode }> = ({
+export const LoadWasm: React.FC<React.PropsWithChildren<{}>> = ({
   children,
 }) => {
   const [isLoading, setIsLoading] = React.useState(true);
