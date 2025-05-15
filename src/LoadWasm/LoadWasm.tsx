@@ -6,7 +6,7 @@ import './LoadWasm.css';
 async function loadWasm(): Promise<void> {
   const goWasm = new window.Go();
   const result = await WebAssembly.instantiateStreaming(
-    fetch('main.wasm'),
+    fetch('/static/js/main.wasm'),
     goWasm.importObject
   );
   goWasm.run(result.instance);
