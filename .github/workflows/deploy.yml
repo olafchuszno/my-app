@@ -31,7 +31,7 @@ jobs:
 
       - name: Build Go Wasm
         run: |
-          cd ./wasm/main.go
+          cd ../wasm/main.go
           GOOS=js GOARCH=wasm go build -o ../build/static/js/main.wasm main.go
 
       - name: Copy Go Wasm glue code
