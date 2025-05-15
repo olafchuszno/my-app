@@ -3,10 +3,21 @@ import './wasm_exec.js';
 import './wasmTypes.d.ts';
 import './LoadWasm.css';
 
+function getStaticAssetPath(filename: string): string {
+  const publicUrl: string = process.env.PUBLIC_URL || '';
+
+  if (publicUrl === '') {
+    return filename
+  }
+
+  const assetDirectory = '/static/js/';
+  return `${publicUrl}${assetDirectory}${filename}`;
+}
+
 async function loadWasm(): Promise<void> {
   const goWasm = new window.Go();
   const result = await WebAssembly.instantiateStreaming(
-    fetch('/static/js/main.wasm'),
+    fetch(getStaticAssetPath('main.go')),
     goWasm.importObject
   );
   goWasm.run(result.instance);
