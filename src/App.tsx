@@ -23,6 +23,7 @@ export const App = () => {
     <div className="App">
       <header className='Logos-Wrapper'>
         <ReactLogoSVG />
+        <div style={{ fontSize: '40px' }}>+</div>
         <img height={100} src={WasmShortLogo} alt="Wasm logo" />
       </header>
       <NumberInput

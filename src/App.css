@@ -5,6 +5,10 @@
   padding-bottom: 48px;
 }
 
+.Logos-Wrapper:first-child {
+  margin-right: -24px;
+}
+
 .App {
   background-color: #282c34;
   min-height: 100vh;
