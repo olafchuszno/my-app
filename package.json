@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://olafchuszno.github.io/react-wasm-golang",
   "private": true,
   "dependencies": {
     "cra-template-typescript-golang": "1.0.0",
