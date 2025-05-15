@@ -1,6 +1,10 @@
 import React from 'react';
-import { NumberInput } from './NumberInput/NumberInput.tsx';
+import { NumberInput } from './NumberInput/NumberInput';
 import './App.css';
+import { ReactLogoSVG } from './ReactLogoSVG';
+import WasmShortLogo from './wasm-short-logo.png'
+
+
 
 export const App = () => {
   const [firstNumberValue, setFirstNumberValue] = React.useState(0);
@@ -17,7 +21,11 @@ export const App = () => {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className='Logos-Wrapper'>
+        <ReactLogoSVG />
+        <img height={100} src={WasmShortLogo} alt="Wasm logo" />
+      </header>
+      <div className="App-Content">
         <NumberInput
           value={firstNumberValue}
           setValue={setFirstNumberValue}
@@ -31,7 +39,7 @@ export const App = () => {
         <button onClick={handleSumNumbers}>
           Click here to "Add" numbers with WebAssembly
         </button>
-      </header>
+      </div>
     </div>
   );
 };

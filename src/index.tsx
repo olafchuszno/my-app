@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { LoadWasm } from './LoadWasm/LoadWasm.tsx';
-import { App } from './App.tsx';
+import { LoadWasm } from './LoadWasm/LoadWasm';
+import { App } from './App';
 import './index.css';
 
 const root = ReactDOM.createRoot(

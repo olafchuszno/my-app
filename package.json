@@ -41,6 +41,8 @@
     ]
   },
   "devDependencies": {
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
     "concurrently": "^9.1.2",
     "watch": "^1.0.2"
   }
