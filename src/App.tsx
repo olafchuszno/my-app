@@ -25,21 +25,19 @@ export const App = () => {
         <ReactLogoSVG />
         <img height={100} src={WasmShortLogo} alt="Wasm logo" />
       </header>
-      <div className="App-Content">
-        <NumberInput
-          value={firstNumberValue}
-          setValue={setFirstNumberValue}
-          label={'First number'}
-        />
-        <NumberInput
-          value={secondNumberValue}
-          setValue={setSecondNumberValue}
-          label={'Second number'}
-        />
-        <button onClick={handleSumNumbers}>
-          Click here to "Add" numbers with WebAssembly
-        </button>
-      </div>
+      <NumberInput
+        value={firstNumberValue}
+        setValue={setFirstNumberValue}
+        label={'First number'}
+      />
+      <NumberInput
+        value={secondNumberValue}
+        setValue={setSecondNumberValue}
+        label={'Second number'}
+      />
+      <button onClick={handleSumNumbers}>
+        Click here to "Add" numbers with WebAssembly
+      </button>
     </div>
   );
 };

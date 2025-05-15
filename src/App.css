@@ -1,18 +1,11 @@
-.App {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 64px;
-}
-
 .Logos-Wrapper {
   display: flex;
   gap: 32px;
   align-items: center;
+  padding-bottom: 48px;
 }
 
-.App-Content {
+.App {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
