@@ -39,6 +39,10 @@ export const App = () => {
       <button onClick={handleSumNumbers}>
         Click here to "Add" numbers with WebAssembly
       </button>
+      <strong className="tooltip-container">
+        Where is the WebAssembly code coming from?
+        <span className="tooltip-content">Check the Network Tab and look for main.wasm!</span>
+      </strong>
     </div>
   );
 };
