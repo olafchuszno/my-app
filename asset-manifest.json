@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-wasm-golang/static/css/main.128fdcbb.css",
+    "main.css": "/react-wasm-golang/static/css/main.1669e932.css",
     "main.js": "/react-wasm-golang/static/js/main.19e91494.js",
     "static/media/wasm-short-logo.png": "/react-wasm-golang/static/media/wasm-short-logo.f421b513723b405bcfa5.png",
     "index.html": "/react-wasm-golang/index.html",
-    "main.128fdcbb.css.map": "/react-wasm-golang/static/css/main.128fdcbb.css.map",
+    "main.1669e932.css.map": "/react-wasm-golang/static/css/main.1669e932.css.map",
     "main.19e91494.js.map": "/react-wasm-golang/static/js/main.19e91494.js.map"
   },
   "entrypoints": [
-    "static/css/main.128fdcbb.css",
+    "static/css/main.1669e932.css",
     "static/js/main.19e91494.js"
   ]
 }
