@@ -4,7 +4,15 @@ import './App.css';
 import { ReactLogoSVG } from './ReactLogoSVG';
 import WasmShortLogo from './wasm-short-logo.png'
 
-
+const addButtonStyles = {
+  backgroundColor: '#654ef0',
+  color: 'white',
+  padding: '4px 8px',
+  borderRadius: '4px',
+  border: 'none',
+  cursor: 'pointer',
+  fontWeight: '600',
+}
 
 export const App = () => {
   const [firstNumberValue, setFirstNumberValue] = React.useState(0);
@@ -36,7 +44,7 @@ export const App = () => {
         setValue={setSecondNumberValue}
         label={'Second number'}
       />
-      <button onClick={handleSumNumbers}>
+      <button style={addButtonStyles} onClick={handleSumNumbers}>
         Click here to "Add" numbers with WebAssembly
       </button>
       <strong className="tooltip-container">
