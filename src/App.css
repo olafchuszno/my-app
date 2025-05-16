@@ -27,7 +27,8 @@
 }
 
 .tooltip-container {
-  margin-top: 8px;
+  margin-top: -8px;
+  font-size: 12px;
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black;
